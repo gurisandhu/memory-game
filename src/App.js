@@ -75,8 +75,8 @@ function App() {
 	return (
 		<div className='container'>
 			<div className='title'>
-				<h1>How is your memory?</h1>
-				<caption>test it by playing below game</caption>
+				<h1>Puppies</h1>
+				<caption>A memory game</caption>
 			</div>
 			<Board
 				dimension={dimension}
