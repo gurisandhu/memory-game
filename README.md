@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Live
 
-[Memory Game](https://memory-game-sooty.now.sh)
+[Memory Game](https://memory-game.guri.now.sh/)
 
 ## Available Scripts
 

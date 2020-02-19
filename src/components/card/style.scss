@@ -1,17 +1,18 @@
 .flip-container {
 	perspective: 1000px;
 	display: inline-block;
-	cursor: pointer;
 	padding: 5px;
 }
 
 .flipper {
+	cursor: pointer;
 	transform-origin: center right;
 	transition: transform 1s;
 	transform-style: preserve-3d;
 	position: relative;
 	&.flipped {
 		transform: translateX(-100%) rotateY(-180deg);
+		cursor: auto;
 	}
 }
 
