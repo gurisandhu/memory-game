@@ -1,20 +1,18 @@
 .flip-container {
 	perspective: 1000px;
 	display: inline-block;
-	border: 4px solid white;
-	background-color: black;
 	cursor: pointer;
-	&.flipped {
-		.flipper {
-			transform: rotateY(180deg);
-		}
-	}
+	padding: 5px;
 }
 
 .flipper {
-	transition: 0.6s all ease;
+	transform-origin: center right;
+	transition: transform 1s;
 	transform-style: preserve-3d;
 	position: relative;
+	&.flipped {
+		transform: translateX(-100%) rotateY(-180deg);
+	}
 }
 
 .front,
@@ -23,13 +21,11 @@
 	position: absolute;
 	left: 0;
 	top: 0;
-}
-
-.back {
-	z-index: 2;
-	transform: rotateY(0deg);
+	text-align: center;
+	width: 100%;
+	height: 100%;
 }
 
 .front {
-	transform: rotateY((180deg));
+	transform: rotateY(180deg);
 }

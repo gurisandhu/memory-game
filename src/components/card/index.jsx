@@ -15,18 +15,24 @@ export default function Card({
 }) {
 	return (
 		<div
-			className={`flip-container ${flipped ? 'flipped' : ''}`}
+			className={`flip-container`}
 			style={{ width, height }}
 			onClick={() => (disabled ? null : handleClick(id))}>
-			<div className='flipper'>
-				<img
-					style={{ width, height }}
-					className={flipped ? 'front' : 'back'}
-					src={`https://i.picsum.photos/id/${
-						flipped || solved ? type : '237'
-					}/300/300.jpg`}
-					alt=''
-				/>
+			<div className={`flipper ${flipped ? 'flipped' : ''}`}>
+				<div className='back'>
+					<img
+						style={{ width, height }}
+						src='https://i.picsum.photos/id/237/300/300.jpg'
+						alt=''
+					/>
+				</div>
+				<div className='front'>
+					<img
+						style={{ width, height }}
+						src={`https://i.picsum.photos/id/${type}/300/300.jpg`}
+						alt=''
+					/>
+				</div>
 			</div>
 		</div>
 	);

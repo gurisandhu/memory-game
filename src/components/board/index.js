@@ -23,7 +23,9 @@ export default function Board({
 					flipped={flipped.includes(card.id)}
 					solved={solved.includes(card.id)}
 					handleClick={handleClick}
-					disabled={disabled || solved.includes(card.id)}
+					disabled={
+						flipped.includes(card.id) || disabled || solved.includes(card.id)
+					}
 				/>
 			))}
 		</div>
