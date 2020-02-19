@@ -18,7 +18,7 @@ export default function Card({
 			className={`flip-container`}
 			style={{ width, height }}
 			onClick={() => (disabled ? null : handleClick(id))}>
-			<div className={`flipper ${flipped ? 'flipped' : ''}`}>
+			<div className={`flipper ${flipped || solved ? 'flipped' : ''}`}>
 				<div className='back'>
 					<img
 						style={{ width, height }}
